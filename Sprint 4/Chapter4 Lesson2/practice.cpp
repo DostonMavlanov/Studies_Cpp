@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+void Hen();
+void Egg(int x);
+
+void Hen(){
+    cout << "Курица вызывает яйцо"s << endl;
+    Egg(0);
+}
+
+void Egg(int x){
+    if (x == 1){
+        cout << "Яйцо вызывает курицу"s << endl;
+        Hen();
+    }else{
+        cout << "А вот и цыпленок!"s << endl;
+    }
+}
+
+int main(){
+    setlocale(LC_ALL, "Russian");
+    Egg(1);
+}
